@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+
+{%block title %} Projects {%endblock%}
+
+{%block info%}
+    {% for pr in  projects_data %}
+        <h2>{{ pr.name }}</h2>
+        <p>Programming language: {{ pr.languages }}</p>
+        <p>Framework:{{ pr.frameworks }}</p>
+        <img src="{{media_url}}{{pr.file}}" width="300" height="200">
+        <a href="{{pr.github_link}}" class="btn btn-dark">GitHub</a>
+        <br>
+
+
+
+
+    {% endfor %}
+{%endblock%}

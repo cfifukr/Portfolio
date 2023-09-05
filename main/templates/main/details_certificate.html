@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title%} Details {%endblock%}
+
+
+{% block info %}
+
+    {% for i in data %}
+        {% if i.id == c_id %}
+        <h1 class="text-center">{{i.course_name}}</h1>
+        <div class="text-center">
+            <img src="{{media_url}}{{i.certicate_photo}}" width="800" length = "600"><br>
+            <a href="{% url 'media_page'%}{{ i.certificate_file}}" class="btn btn-dark">Download</a>
+            <a href="{{i.link}}" class="btn btn-dark">Website</a>
+        </div>
+
+        {% endif %}
+    {%endfor%}
+
+
+{% endblock %}
+

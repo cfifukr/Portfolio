@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Certificates {% endblock %}
+
+{% block info %}
+
+    {% for i in certificates %}
+        <h1>{{i.course_name}}</h1>
+        <h2>Result:{{i.mark}}</h2>
+        <img src="{{media_url}}{{i.certicate_photo}}" height="300" width="400">
+        <a href="{{i.id}}" class="btn btn-dark">Details</a
+        <br>
+        <br>
+        <br>
+        <br>
+    {% endfor %}
+
+
+{% endblock %}
